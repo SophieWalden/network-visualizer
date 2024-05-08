@@ -1,8 +1,9 @@
 {
   "name": "sensorspace",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "type": "module",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
