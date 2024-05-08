@@ -1,0 +1,36 @@
+{
+  "added elements": {
+    "OS Device Information.Network Node Hostname": "ubuntu",
+    "Tracking.File": "192.168.1.137 01/18/24 08:00:02",
+    "Tracking.Time": "08:00:02",
+    "Tracking.Date": "01/18/24",
+    "Tracking.IP": "192.168.1.137",
+    "USB Diagnostic Messages.usb_phy_generic phy": [
+      {
+        "supply vcc not found, using dummy regulator": {
+          "Day": "Tue",
+          "Date": "Sep 19",
+          "Time": "14:07:19",
+          "Year": "2023"
+        }
+      },
+      {
+        "dummy supplies not allowed for exclusive requests": {
+          "Day": "Tue",
+          "Date": "Sep 19",
+          "Time": "14:07:19",
+          "Year": "2023"
+        }
+      }
+    ],
+    "USB Devices.Bus:01 Level:00.Topology.Parent Device": "00"
+  },
+  "deleted elements": {
+    "OS Device Information.Network Node Hostname": "ubuntuTESTING01",
+    "Tracking.File": "192.168.1.25 01/17/24 08:00:01",
+    "Tracking.Time": "08:00:01",
+    "Tracking.Date": "01/17/24",
+    "Tracking.IP": "192.168.1.25",
+    "USB Devices.Bus:01 Level:00.Topology.Parent DeviceTESTING02": "00"
+  }
+}

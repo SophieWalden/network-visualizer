@@ -1,0 +1,47 @@
+{
+  "added elements": {
+    "127.0.1.1 02/23/24 14:14:24": {
+      "IP": "127.0.1.1",
+      "Date": "02/23/24",
+      "Time": "14:14:24"
+    }
+  },
+  "deleted elements": {
+    "127.0.1.1 02/23/24 14:11:49": {
+      "IP": "127.0.1.1",
+      "Date": "02/23/24",
+      "Time": "14:11:49"
+    },
+    "USB Diagnostic Messages.hub 1-19.4:1.0": [
+      {
+        "USB hub found": {
+          "Day": "Fri",
+          "Date": "Feb 23",
+          "Time": "11:52:35",
+          "Year": "2024"
+        }
+      }
+    ],
+    "All Packages Installed.karsenault": {
+      "Distribution Name": "focal",
+      "Installed Version": "2.0.4-4ubuntu2",
+      "Architecture": "testing",
+      "Download Status": "package dependency"
+    },
+    "Network Interfaces.8": {
+      "Interface Name": "br-4d052a342b76",
+      "Interface Capabilites": "NO-CARRIER,BROADCAST,MULTICAST,UP",
+      "Max Transmission Unit": "1500",
+      "Queuing Discipline": "noqueue",
+      "Software Construct": "DOWN",
+      "Interface Group": "default",
+      "Transmission Queue Length": "default",
+      "Loopback": "02:42:f1:ae:06:94",
+      "Broadcast": "ff:ff:ff:ff:ff:ff",
+      "Network Layer": "IPv4",
+      "inet": "172.18.0.1/16",
+      "Scope": "br 4d052a342b76",
+      "Lease Length": "forever"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+
+
+Visual Changes:
+- Make notification page look prettier
+- Keep exchanging noeds names for simpler names
+- Make settings page look prettier and fix light mode / Disable light mode
+- connect nodes by bus number
+
+New Mechanical Changes:
+- Create it so you can see the exact list of timespans when you hover near it in the slider and are able to teleport to them
+
+Demo Video Changes:
+- Put Title at top
+- Put endscreen showing off everyone on the project

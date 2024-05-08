@@ -1,0 +1,24 @@
+{
+  "added elements": {
+    "127.0.1.1 02/23/24 15:00:31": {
+      "IP": "127.0.1.1",
+      "Date": "02/23/24",
+      "Time": "15:00:31"
+    },
+    "USB Devices.Bus:01 Level:01 Port:12.Vendor and Product.Serial Number": "0000"
+  },
+  "deleted elements": {
+    "127.0.1.1 02/23/24 14:49:43": {
+      "IP": "127.0.1.1",
+      "Date": "02/23/24",
+      "Time": "14:49:43"
+    },
+    "USB Devices.Bus:01 Level:01 Port:12.Vendor and Product.Serial Number": "xyp",
+    "All Packages Installed.libmagic-mgc": {
+      "Distribution Name": "focal",
+      "Installed Version": "1:5.38-4",
+      "Architecture": "amd64",
+      "Download Status": "package dependency"
+    }
+  }
+}

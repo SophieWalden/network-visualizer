@@ -1,0 +1,12 @@
+{
+  "added elements": {
+    "Tracking.File": "192.168.1.14 01/24/24 08:00:01",
+    "Tracking.IP": "192.168.1.14",
+    "Tracking.Date": "01/24/24"
+  },
+  "deleted elements": {
+    "Tracking.File": "192.168.1.137 01/23/24 08:00:01",
+    "Tracking.IP": "192.168.1.137",
+    "Tracking.Date": "01/23/24"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "added elements": {
+    "127.0.1.1 02/23/24 14:46:21": {
+      "IP": "127.0.1.1",
+      "Date": "02/23/24",
+      "Time": "14:46:21"
+    },
+    "All Packages Installed.test4": {
+      "Distribution Name": "now",
+      "Installed Version": "1.07.1-2build1",
+      "Architecture": "amd64",
+      "Download Status": "package dependency"
+    },
+    "All Packages Installed.test5": {
+      "Distribution Name": "focal-updates",
+      "Installed Version": "3.36.2-0ubuntu1",
+      "Architecture": "amd64",
+      "Download Status": "package dependency"
+    },
+    "OS Device Information.Codename": "test",
+    "USB Diagnostic Messages.usb 1-13": [
+      {
+        "new low-speed USB device number 3 using xhci_hcd": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "New USB device found, idVendor=0557, idProduct=2221, bcdDevice= 1.00": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "New USB device strings: Mfr=1, Product=2, SerialNumber=3": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "Product: V3.0": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "Manufacturer: test3": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "SerialNumber: xyp": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      }
+    ],
+    "Network Interfaces.8": {
+      "Interface Name": "br-4d052a342b76",
+      "Interface Capabilites": "NO-CARRIER,BROADCAST,MULTICAST,UP",
+      "Max Transmission Unit": "1500",
+      "Queuing Discipline": "noqueue",
+      "Software Construct": "DOWN",
+      "Interface Group": "default",
+      "Transmission Queue Length": "default",
+      "Loopback": "02:42:f1:ae:06:94",
+      "Broadcast": "ff:ff:ff:ff:ff:ff",
+      "Network Layer": "IPv4",
+      "inet": "172.18.0.1/16",
+      "Scope": "br 4d052a342b76",
+      "Lease Length": "forever"
+    },
+    "USB Devices.Bus:04 Level:00 Port:00.Interface and Endpoint Descriptors.Interface: 0x0.Driver": "test2"
+  },
+  "deleted elements": {
+    "127.0.1.1 02/23/24 14:14:24": {
+      "IP": "127.0.1.1",
+      "Date": "02/23/24",
+      "Time": "14:14:24"
+    },
+    "All Packages Installed.bolt": {
+      "Distribution Name": "now",
+      "Installed Version": "1.07.1-2build1",
+      "Architecture": "amd64",
+      "Download Status": "package dependency"
+    },
+    "All Packages Installed.yelp": {
+      "Distribution Name": "focal-updates",
+      "Installed Version": "3.36.2-0ubuntu1",
+      "Architecture": "amd64",
+      "Download Status": "package dependency"
+    },
+    "OS Device Information.Codename": "focal",
+    "USB Diagnostic Messages.usb 1-13": [
+      {
+        "new low-speed USB device number 3 using xhci_hcd": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "New USB device found, idVendor=0557, idProduct=2221, bcdDevice= 1.00": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "New USB device strings: Mfr=1, Product=2, SerialNumber=3": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "Product: V3.0": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "Manufacturer: Kinan": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      },
+      {
+        "SerialNumber: xyp": {
+          "Day": "Sat",
+          "Date": "Aug 19",
+          "Time": "11:52:33",
+          "Year": "2023"
+        }
+      }
+    ],
+    "USB Devices.Bus:04 Level:00 Port:00.Interface and Endpoint Descriptors.Interface: 0x0.Driver": "hub"
+  }
+}
