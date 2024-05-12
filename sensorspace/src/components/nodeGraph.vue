@@ -597,7 +597,7 @@ export default {
           }
 
           this.nodes[packageName + ip] = {name: packageName, theme: this.theme,  label: nodeLabel, size: packageSize,nodeData: nodeData, image: deviceImage, ip: ip}
-          this.edges[packageName + Math.random()] = {source: packageName + ip, target: "Packages" + ip, color: "4f0e09" , ip: ip}
+          this.edges[packageName + Math.random()] = {source: packageName + ip, target: "Packages" + ip, color: "#4f0e09" , ip: ip}
         
           // Deciding Positioning
           if (!(packageName + ip in this.layouts["nodes"])){

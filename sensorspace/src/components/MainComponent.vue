@@ -5,6 +5,7 @@ import '@vuepic/vue-datepicker/dist/main.css';
 import sliderComponent from "./sliderComponent.vue";
 
 
+
 export default {
   components: {nodeGraph, sliderComponent},
   data() {
@@ -49,12 +50,16 @@ export default {
   },
   methods: {
     fetchNewData(){
+
+
       let results = []
+   
       for (let i = 0; i < 135; i++){
-        fetch(`/network-visualizer/src/components/device_files/day_files/${i}.json`).then(response => {
+        fetch(`/network-visualizer/day_files/${i}.json`).then(response => {
           console.log(response);
         return response.json();
-      }).then(json => {
+      }).then(json => { 
+        console.log(json);
         results.push(json);
         
 

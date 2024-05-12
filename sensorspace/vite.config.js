@@ -7,6 +7,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/network-visualizer/",
+  assetsInclude: ['**/*.json'],
+  publicDir: 'public', // Specify the public directory
   plugins: [
     vue(),
     vueJsx(),
