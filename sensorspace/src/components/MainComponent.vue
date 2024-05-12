@@ -21,7 +21,7 @@ export default {
       selectedNodeInfo: {},
       selectedNodeName: "",
       showSettings: false,
-      colorScheme: "Light",
+      colorScheme: "Dark",
       showNotifications: false,
       notifications: {},
       prevDevices: {},
@@ -51,7 +51,8 @@ export default {
     fetchNewData(){
       let results = []
       for (let i = 0; i < 135; i++){
-        fetch(`/src/components/device_files/day_files/${i}.json`).then(response => {
+        fetch(`/network-visualizer/src/components/device_files/day_files/${i}.json`).then(response => {
+          console.log(response);
         return response.json();
       }).then(json => {
         results.push(json);
