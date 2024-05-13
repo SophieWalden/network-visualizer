@@ -146,7 +146,8 @@ export default {
         let selectedNode = newVal[0];
 
         if (selectedNode in this.nodes){
-          this.$emit("selectedNodeChange", {nodeName: selectedNode, node: this.nodes[selectedNode].nodeData});
+        
+          this.$emit("selectedNodeChange", {nodeName: selectedNode, node: this.nodes[selectedNode].nodeData, name: this.nodes[selectedNode].name});
         }
 
       }
@@ -257,24 +258,97 @@ export default {
       this.edges["2"] = {source: "1", target: "172.20.88.17", nodeData: {}, color:  "#062236", ip: ip}
       this.nodes["3"] = {name: "Technology Controller", size: 16, theme: this.theme, nodeData: device, image: tempUrl , ip: ip};
       this.edges["4"] = {source: "3", target: "172.20.88.18", nodeData: {}, color:  "#062236", ip: ip}
+
+      this.nodes["7"] = {name: "USB Hub", size: 24, theme: this.theme, nodeData: device, image: tempUrl , ip: ip};
+      this.edges["8"] = {source: "7", target: "172.20.88.16", nodeData: {}, color:  "#062236", ip: ip}
+
+      this.nodes["24"] = {name: "USB Hub", size: 24, theme: this.theme, nodeData: device, image: tempUrl , ip: ip};
+      this.edges["25"] = {source: "24", target: "172.20.88.16", nodeData: {}, color:  "#062236", ip: ip}
     }
     
     if (ip == "172.20.88.16"){
       machineNodeImage = "https://cdn-icons-png.freepik.com/512/3617/3617061.png"; // Machine is 3d printer
       nodeName = "Central Server"
+      size = 48;
+      
     } 
     if (ip.includes("192.168.1")){
       machineNodeImage = "https://projects.raspberrypi.org/images/hardware-cards/sensehat.svg";
       nodeName = "Rasberry Pi";
-      anchorNode = "172.20.88.16";
+      anchorNode = "7";
+
+      this.nodes[ip + "9"] = {name: nodeName, isMachineIPNode: true, size: size, theme: this.theme, nodeData: device["entry"], image: machineNodeImage}
+      this.edges[ip + "9" + Math.random()] = {source: ip + "9", target: anchorNode, color:  "#062236", ip: ip}
+
+
+      let networkImage = "https://cdn.icon-icons.com/icons2/614/PNG/512/wifi-symbol-inside-a-circle_icon-icons.com_56445.png";
+      this.nodes[ip + "12"] = {name: "Ethernet Connection", size: 16, theme: this.theme, nodeData: device, image: networkImage , ip: ip};
+      this.edges[ip + "9" + Math.random()] = {source: ip + "9", target: ip + "12", color:  "#062236", ip: ip}
+
+
+      let tempUrl = "https://cdn2.iconfinder.com/data/icons/technology-flat-line/70/microcontroller-512.png";
+
+      this.nodes[ip + "3"] = {name: "Operational Technology", isMachineIPNode: true, size: 24, theme: this.theme, nodeData: device["entry"], image: "https://static.vecteezy.com/system/resources/previews/037/092/781/non_2x/robotic-arm-line-filled-circle-icon-vector.jpg"}
+      this.edges[ip + Math.random()] = {source: ip + "3", target: ip + "9", color:  "#062236", ip: ip}
+      this.nodes[ip + "1"] = {name: "Technology Controller", size: 16, theme: this.theme, nodeData: device, image: tempUrl , ip: ip};
+      this.edges[ip + "2"] = {source: ip + "1", target: ip + "3", nodeData: {}, color:  "#062236", ip: ip}
     
+
+      let img = "https://static.vecteezy.com/system/resources/previews/037/143/357/non_2x/motion-sensor-flat-circle-icon-vector.jpg";
+      this.nodes[ip + "10"] = {name: "Distance Sensor", isMachineIPNode: true, size: 16, theme: this.theme, nodeData: device["entry"], image: img}
+      this.edges[ip + "10" + Math.random()] = {source: ip + "9", target: ip + "10", color:  "#062236", ip: ip}
+
+
+
+      // Hub 2
+      anchorNode = "24";
+
+      this.nodes[ip + "9111"] = {name: nodeName, isMachineIPNode: true, size: size, theme: this.theme, nodeData: device["entry"], image: machineNodeImage}
+      this.edges[ip + "9111" + Math.random()] = {source: ip + "9111", target: anchorNode, color:  "#062236", ip: ip}
+
+
+      networkImage = "https://cdn.icon-icons.com/icons2/614/PNG/512/wifi-symbol-inside-a-circle_icon-icons.com_56445.png";
+      this.nodes[ip + "12111"] = {name: "Ethernet Connection", size: 16, theme: this.theme, nodeData: device, image: networkImage , ip: ip};
+      this.edges[ip + "9111" + Math.random()] = {source: ip + "9111", target: ip + "12111", color:  "#062236", ip: ip}
+
+
+      tempUrl = "https://cdn2.iconfinder.com/data/icons/technology-flat-line/70/microcontroller-512.png";
+
+      this.nodes[ip + "3111"] = {name: "Operational Technology", isMachineIPNode: true, size: 24, theme: this.theme, nodeData: device["entry"], image: "https://static.vecteezy.com/system/resources/previews/037/092/781/non_2x/robotic-arm-line-filled-circle-icon-vector.jpg"}
+      this.edges[ip + Math.random()] = {source: ip + "3111", target: ip + "9111", color:  "#062236", ip: ip}
+      this.nodes[ip + "1111"] = {name: "Technology Controller", size: 16, theme: this.theme, nodeData: device, image: tempUrl , ip: ip};
+      this.edges[ip + "2111"] = {source: ip + "1111", target: ip + "3111", nodeData: {}, color:  "#062236", ip: ip}
+    
+
+      img = "https://static.vecteezy.com/system/resources/previews/037/143/357/non_2x/motion-sensor-flat-circle-icon-vector.jpg";
+      this.nodes[ip + "10111"] = {name: "Distance Sensor", isMachineIPNode: true, size: 16, theme: this.theme, nodeData: device["entry"], image: img}
+      this.edges[ip + "10111" + Math.random()] = {source: ip + "9111", target: ip + "10111", color:  "#062236", ip: ip}
+
+      anchorNode = "7"
+      
     }
     if (ip.includes("26")){
       nodeName = "Drone"
       machineNodeImage = "https://images.assetsdelivery.com/compings_v2/ahasoft2000/ahasoft20001604/ahasoft2000160400204.jpg";
-      anchorNode = "172.20.88.16";
+      anchorNode = "Drone Anchor Node";
+
+      
+
+      let tempUrl = "https://cdn2.iconfinder.com/data/icons/technology-flat-line/70/microcontroller-512.png";
+      this.nodes["Drone Anchor Node"] = {name: "USB Hub", size: 16, theme: this.theme, nodeData: device, image: tempUrl , ip: ip};
+      this.edges["Drone Anchor Node Connection"] = {source: "Drone Anchor Node", target: "172.20.88.16", nodeData: {}, color:  "#062236", ip: ip}
+
+      for (let i = 0; i < 3; i++){
+        this.nodes[ip + "11" + i] = {name: "Drone", isMachineIPNode: true, size: 24, theme: this.theme, nodeData: device["entry"], image: machineNodeImage}
+        this.edges[ip + "11" + Math.random()] = {source: ip + "11" + i, target: anchorNode, color:  "#062236", ip: ip}
+
+        this.nodes[ip + "12" + i] = {name: "Drone Controller", isMachineIPNode: true, size: 16, theme: this.theme, nodeData: device["entry"], image: "https://media.istockphoto.com/id/1223128768/vector/white-wireless-gamepad-icon-isolated-with-long-shadow-game-controller-red-circle-button.jpg?s=612x612&w=0&k=20&c=F1NWU4lRoLD4W1NqLUqcE1cdB5wwBuIWgeyI7Xt5w0U="}
+        this.edges[ip + "12" + Math.random()] = {source: ip + "12" + i, target: ip + "11" + i, color:  "#062236", ip: ip}
+      }
     }
 
+
+    // device["entry"]["Vendor and Product"]["Product"] = nodeName;
     this.nodes[ip] = {name: nodeName, isMachineIPNode: true, size: size, theme: this.theme, nodeData: device["entry"], image: machineNodeImage}
 
     if (anchorNode != null){
@@ -356,7 +430,10 @@ export default {
           url = "data:image/png;base64,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"
           size = 24;
 
+          
           let networkImage = "https://cdn.icon-icons.com/icons2/614/PNG/512/wifi-symbol-inside-a-circle_icon-icons.com_56445.png";
+          
+          
           this.nodes["5"] = {name: "Database Endpoint", size: 16, theme: this.theme, nodeData: device, image: networkImage , ip: ip};
         
         }else if (deviceName.includes("iDRAC")){
@@ -378,12 +455,33 @@ export default {
         let storageName = `${ip} ${deviceName} ${seenDevicesNames[deviceName]}`;
 
         
-        // Old Color: ADD8E6
-        this.nodes[storageName] = {name: deviceName, size: size, theme: this.theme, nodeData: device, image: url , ip: ip};
-        this.edges[storageName] = {source: ip, target: storageName, nodeData: USBs[device], color:  "#062236", ip: ip}
+        
 
         if (deviceName == "Database"){
+          this.nodes["database Hub"] = {name: "Database Connector", size: 16, theme: this.theme, nodeData: device, image: "https://cdn-icons-png.flaticon.com/512/432/432545.png" , ip: ip};
+          this.edges["database Hub Connection"] = {source: "database Hub", target: ip, nodeData: USBs[device], color:  "#062236", ip: ip}
+          
+          let networkImage = "https://cdn.icon-icons.com/icons2/614/PNG/512/wifi-symbol-inside-a-circle_icon-icons.com_56445.png";
+          for (let i = 0; i < 3; i++){
+            this.nodes["database" + i] = {name: "Database", size: size, theme: this.theme, nodeData: device, image: url , ip: ip};
+            this.edges["databaseConnection" + i] = {source: "database Hub", target: "database" + i, nodeData: USBs[device], color:  "#062236", ip: ip}
+            
+
+            this.nodes["5" + i] = {name: "Database Endpoint", size: 16, theme: this.theme, nodeData: device, image: networkImage , ip: ip};
+            this.edges["6" + i] = {source: "5" + i, target: "database" + i, nodeData: {}, color:  "#062236", ip: ip}
+
+          }
+          
           this.edges["6"] = {source: "5", target: storageName, nodeData: {}, color:  "#062236", ip: ip}
+
+          this.nodes[storageName] = {name: deviceName, size: size, theme: this.theme, nodeData: device, image: url , ip: ip};
+          this.edges[storageName] = {source: "database Hub", target: storageName, nodeData: USBs[device], color:  "#062236", ip: ip}
+
+          
+        }else{
+          // Old Color: ADD8E6
+          this.nodes[storageName] = {name: deviceName, size: size, theme: this.theme, nodeData: device, image: url , ip: ip};
+          this.edges[storageName] = {source: ip, target: storageName, nodeData: USBs[device], color:  "#062236", ip: ip}
         }
         
         // Deciding Positioning

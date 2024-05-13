@@ -17,7 +17,7 @@ export default {
       devices: {},
       date: [new Date(), new Date()],
       currentDate: new Date(),
-      playing: false,
+      playing: true,
       selectedNode: null,
       selectedNodeInfo: {},
       selectedNodeName: "",
@@ -47,6 +47,7 @@ export default {
 
   mounted(){
     this.fetchNewData();
+    
   },
   methods: {
     fetchNewData(){
@@ -56,10 +57,10 @@ export default {
    
       for (let i = 0; i < 135; i++){
         fetch(`/network-visualizer/day_files/${i}.json`).then(response => {
-          console.log(response);
+
         return response.json();
       }).then(json => { 
-        console.log(json);
+    
         results.push(json);
         
 
@@ -73,6 +74,8 @@ export default {
           // Push out entries and assign lifepsans
           this.deviceList = this.get_devices(entries);
           [this.dateTimestamps, this.dateTimestampsByIp] = this.get_timestamps(this.deviceList);
+
+          this.playThroughDate(true);
         }
       })
       }
@@ -296,29 +299,25 @@ export default {
       let node = selectedNode["node"];
       if (node == undefined) return;
 
+      this.selectedNodeName = selectedNode["name"];
+    
+
       if ("Device Descriptor" in node){ // Its a usb connected node
         let extraInfo = {};
-        let foundDeviceName;
+     
         if ("Vendor and Product" in node){
-          foundDeviceName = node["Vendor and Product"]["Product"];
+         
           extraInfo = node["Vendor and Product"];
         }else{
-          foundDeviceName = node["Device Descriptor"]["Device Class"];
+
           extraInfo = node["Device Descriptor"];
         } 
 
-        this.selectedNodeName = foundDeviceName;
         this.selectedNodeInfo = extraInfo;
 
       }else{ // Its an ip node
-        let substituteNames = {"172.20.88.16": "BAAM Host", "172.20.88.17": "ARP Lab Host"}
 
-        
-        if (this.selectedNode in substituteNames){
-          this.selectedNodeName = substituteNames[this.selectedNode];
-        }else{
-          this.selectedNodeName = "Rasberry Pi";
-        }
+    
         
         this.selectedNodeInfo = node["OS Device Information"];
       }
